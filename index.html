@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSO landing page</title>
+
+    <link rel="icon" type="image/x-icon" href="assets_v2/img/lfc-logo.svg">
+
+    <!-- Bootstrap Files -->
+    <link rel="stylesheet" href="assets_v2/bootstrap/index.css">
+    <script src="assets_v2/bootstrap/popper.min.js"></script>
+    <script src="assets_v2/bootstrap/index.js"></script>
+
+    <!-- layout css -->
+    <link rel="stylesheet" href="assets_v2/index.css">
+
+    <!-- Jquery -->
+    <script src="assets_v2/jquery-3.7.1.min.js"></script>
+    
+</head>
+    <body>
+
+        <!-- header -->
+        <div id="header"></div>
+
+        <!-- main body -->
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-center vh-100">
+                <div class="col-12 col-lg-10">
+                    <div class="vstack gap-4">
+                        <div>
+                            <h1>Company Systems</h1>
+                            <p>What system will you be using today?</p>
+                        </div>
+                        <div class="carousel slide" id="slider">
+                                <!-- middle indicators -->
+                            <div class="carousel-indicators d-lg-none">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+
+                            <!-- sliding images -->
+                            <div class="carousel-inner">
+                                <div id="append_selection" class="hstack gap-3" >
+                                    
+                                </div>
+                            </div>
+
+                            <!-- two sided button -->
+                            <button class="carousel-control-prev d-lg-none" type="button" data-bs-target="#slider" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next d-lg-none" type="button" data-bs-target="#slider" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                            <!-- lowe button -->
+                    <div class="button text-end">
+                        <button class="btn btn-secondary rounded-5 col-12 col-lg-2 col-xl-2" onclick="log_out()">
+                            <img src="assets_v2/img/logout.svg" height="16" width="16" alt="cahel"> 
+                            logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+         
+        <!-- footer -->
+        <div id="footer"></div>
+
+    </body>
+
+</html>
+    
+    <script type="text/javascript" src="assets_v2/js/constants.js"></script>
+    <script type="text/javascript" src="assets_v2/js/security.js"></script>
+    <script src="assets_v2/index.js"></script>
