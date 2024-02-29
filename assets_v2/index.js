@@ -133,8 +133,18 @@ $(document).ready(function()
 
     log_out = function() 
     {
+        $("div[id='append_selection']").html(null);
+        $("div[id='append_selection']").append(lock_section);
+        $("div[id='append_selection']").append(lock_section);
+        $("div[id='append_selection']").append(lock_section);
+
+        setTimeout(function() {
+            $("#forPreLoader").fadeIn('slow');
+        }, 500);
+
         const logout_url = _globalContants.lfc_sso_auth_logout_url + _globalContants.lfc_sso_default_logout_uri;
         window.location.replace(logout_url);
+        
         localStorage.clear();
     };
 
