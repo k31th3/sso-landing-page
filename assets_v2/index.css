@@ -40,7 +40,7 @@ body
         /* image and text hover  with filter saturated*/
         .carousel .carousel-inner .carousel-item img
         {
-                opacity: 30%;
+                opacity: 20%;
                 filter:saturate(0%);
         }
 

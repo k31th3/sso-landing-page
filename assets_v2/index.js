@@ -62,15 +62,23 @@ $(document).ready(function()
                 console.log('isEmail: ' + isEmail)
                 console.log('emailUsername: ' + emailUsername)
 
-                var hasHupayRole = false;
-                var hasFianaRole = false;
+                var hasHupayRole = false,
+                    hasFianaRole = false,
+                    hasCahelRole = false;
+
                 if (_lfcssoidentity["cognito:groups"].length > 0) {
                     _lfcssoidentity["cognito:groups"].forEach(function(data) {
-                        if (data == "Hupay_Role") {
+                        if (data == "Hupay_Role") 
+                        {
                             hasHupayRole = true;
                         }
-                        if (data == "Fiana_Role") {
+                        if (data == "Fiana_Role") 
+                        {
                             hasFianaRole = true;
+                        }
+                        if (data == "Cahel_Role") 
+                        {
+                            hasCahelRole = true;
                         }
                     })
                 }
@@ -114,9 +122,26 @@ $(document).ready(function()
                 {
                     $("div[id='append_selection']").append(lock_section);
                 }
-                
-                $("div[id='append_selection']").append(lock_section);
-                
+
+                if (hasCahelRole) 
+                {
+                    cahel_section = `<div class="carousel-item" id="cahel_section">
+                                                    <div class="card rounded-5">
+                                                        <div class="card-body vstack gap-3 justify-content-center align-items-center">
+                                                            <div class="col-8 text-center">
+                                                                <img src="assets_v2/img/cahel-logo-(seed).svg" alt="cahel">
+                                                            </div>
+                                                            <p>8:00am - 8:00pm</p>
+                                                        </div>
+                                                    </div>
+                                                </div>`;
+
+                    $("div[id='append_selection']").append(cahel_section);  
+                }
+                else
+                {
+                    $("div[id='append_selection']").append(lock_section);
+                }
             },
             error: function(response) {
 
@@ -158,13 +183,23 @@ $(document).ready(function()
         window.location.href = "http://hupay.lloydsfinancingph.com/hupay/index.php#id_token=" + id_token + "&expires_in=" + expires_in + "&access_token=" + access_token + "&token_type=" + token_type + "&company_id=" + company_id;  
     });
 
-    $(document).on('click', '#fiana_section', function(e) {
+    $(document).on("click", "#fiana_section", function(e) {
         var expires_in = window.localStorage.getItem("expires_in"),
             id_token = window.localStorage.getItem("id_token"),
             access_token = window.localStorage.getItem("access_token"),
             token_type = window.localStorage.getItem("token_type");
 
         window.location.href = "http://fiana.lloydsfinancingph.com/index.php/verify#id_token=" + id_token + "&expires_in=" + expires_in + "&access_token=" + access_token + "&token_type=" + token_type;
+    });
+
+    $(document).on("click", "#cahel_section", function(e) 
+    {
+        var expires_in = window.localStorage.getItem("expires_in"),
+            id_token = window.localStorage.getItem("id_token"),
+            access_token = window.localStorage.getItem("access_token"),
+            token_type = window.localStorage.getItem("token_type");
+
+        window.location.href = "http://cahel.lloydsfinancingph.com/sso#id_token=" + id_token + "&expires_in=" + expires_in + "&access_token=" + access_token + "&token_type=" + token_type;
     });
 
     preloader();
