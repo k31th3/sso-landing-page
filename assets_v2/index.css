@@ -7,12 +7,12 @@ body
 }
 
 /*carousel*/
-/*.carousel .carousel-inner .carousel-item>img 
+.carousel .carousel-inner .carousel-item>img 
 {
         width: 100px;
         height: 500px;
         object-fit: cover;
-}*/
+}
 
 /* Media query */
 @media (min-width: 992px) 
@@ -22,7 +22,7 @@ body
         {
                 display: block;
                 float: none; 
-                width: 33.33333333%;
+                width: 50%;
                 margin-right: 0;
                 transition: all .3s ease;
         }
