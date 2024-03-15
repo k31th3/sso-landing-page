@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSO landing page</title>
+
+    <link rel="icon" type="image/x-icon" href="assets_v2/img/lfc-logo.svg">
+
+    <!-- Bootstrap Files -->
+    <link rel="stylesheet" href="assets_v2/bootstrap/index.css">
+    <script src="assets_v2/bootstrap/popper.min.js"></script>
+    <script src="assets_v2/bootstrap/index.js"></script>
+
+    <!-- layout css -->
+    <link rel="stylesheet" href="assets_v2/index.css">
+
+    <!-- Jquery -->
+    <script src="assets_v2/jquery-3.7.1.min.js"></script>
+    
+</head>
+    <body>
+
+        <!-- header -->
+        <div id="header"></div>
+
+        <!-- main body -->
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-center vh-100">
+                <div class="col-12 col-xl-10 col-lg-11">
+                    <div class="row gy-5">
+
+                        <div class="col-12">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="index.html" class="btn btn-sm btn-light fw-bold text-uppercase">option 1</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="option_2.html" class="btn btn-sm btn-light fw-bold text-uppercase">option 2</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="option_3.html" class="btn btn-sm btn-light fw-bold text-uppercase">option 3</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- left side -->
+                        <div class="col-12 col-xl-6 col-lg-5 col-md-6 m-auto">
+                            <div class="vstack gap-2">
+                                <div class="h1">Company Systems</div>
+                                <p class="fw-6">What system will you be using today?</p>
+                                <div class="col-6">
+                                    <button class="btn btn-secondary rounded-5 w-100 d-md-block d-none" onclick="log_out()">
+                                        <img src="assets_v2/img/logout.svg" height="16" width="16" alt="cahel"> 
+                                        logout
+                                    </button>
+                                </div> 
+                            </div>
+                        </div>
+
+                        <!-- right side -->
+                        <div class="col-12 col-xl-6 col-lg-7 col-md-6">
+                            <!-- carousel -->
+                            <div class="carousel slide " id="slider">
+                                <!-- middle indicators -->
+                                <div class="carousel-indicators d-lg-none">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                </div>
+
+                                <!-- sliding images -->
+                                <div class="carousel-inner">
+                                    <div id="append_selection" class="row gy-3">
+                                        <div class="carousel-item active">
+                                            <div class="card rounded-5">
+                                                <div class="card-header"></div>
+                                                <div class="card-body text-center vstack gap-4">
+                                                    <div class="col-8 m-auto">
+                                                       <img src="assets_v2/img/hupay.svg" height="100" width="100" alt="hupay">
+                                                    </div>
+                                                    <p>8:00am - 8:00pm</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="card rounded-5">
+                                                <div class="card-header"></div>
+                                                <div class="card-body text-center vstack gap-4">
+                                                    <div class="col-8 m-auto">
+                                                       <img src="assets_v2/img/fiana.svg" height="100" width="100" alt="fiana">
+                                                    </div>
+                                                    <p>8:00am - 8:00pm</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="card rounded-5">
+                                                <div class="card-header"></div>
+                                                <div class="card-body text-center vstack gap-2">
+                                                    <div class="col-8 m-auto">
+                                                       <img src="assets_v2/img/cahel.svg" height="115" width="120" alt="cahel">
+                                                    </div>
+                                                    <p>8:00am - 8:00pm</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="card rounded-5">
+                                                <div class="card-header"></div>
+                                                <div class="card-body text-center vstack gap-4">
+                                                    <div class="col-8 m-auto">
+                                                       <img src="assets_v2/img/lock-keyhole.svg" height="100" width="100" alt="lock">
+                                                    </div>
+                                                    <p>locked</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                     <!-- two sided button -->
+                                     <button class="carousel-control-prev d-lg-none" type="button" data-bs-target="#slider" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                     </button>
+                                     <button class="carousel-control-next d-lg-none" type="button" data-bs-target="#slider" data-bs-slide="next">
+                                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                         <span class="visually-hidden">Next</span>
+                                     </button>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <!-- hidden to lg size visible to mobile size button -->
+                        <div class="col-12 d-md-none">
+                            <button class="btn btn-secondary rounded-5 w-100" onclick="log_out()">
+                                <img src="assets_v2/img/logout.svg" height="16" width="16" alt="cahel"> 
+                                logout
+                           </button>
+                        </div>
+                    </div>
+                </div>                                                                                         
+            </div>
+        </div>
+       
+         
+        <!-- footer -->
+        <div id="footer"></div>
+
+    </body>
+
+</html>
+    
+    <!-- <script type="text/javascript" src="assets_v2/js/constants.js"></script>
+    <script type="text/javascript" src="assets_v2/js/security.js"></script>
+    <script src="assets_v2/index.js"></script> -->
