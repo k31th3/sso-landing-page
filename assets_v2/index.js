@@ -13,15 +13,16 @@ $(document).ready(function()
 	$('#footer').load("layout_v2/footer.html");
 
 	lock_section = `<div class="carousel-item">
-            <div class="card rounded-5">
-                <div class="card-body vstack gap-3 justify-content-center align-items-center">
-                    <div class="col-8 text-center">
-                        <img src="assets_v2/img/lock-keyhole.svg" height="100" width="100" alt="cahel">
-                        <p class="fw-bold">Lock</p>                                      
-                    </div>  
-                </div>                            
-            </div>
-        </div>`; 	
+                        <div class="card rounded-5">
+                            <div class="card-header"></div>
+                            <div class="card-body text-center vstack gap-4">
+                                <div class="col-8 m-auto">
+                                   <img src="assets_v2/img/lock-keyhole.svg" height="100" width="100" alt="lock">
+                                </div>
+                                <p>locked</p>
+                            </div>
+                        </div>
+                    </div>`; 	
 
     var _lfcssoidentity = window.localStorage.getItem("lfcssoidentity");
     _lfcssoidentity = JSON.parse(_lfcssoidentity);

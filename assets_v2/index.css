@@ -72,14 +72,9 @@ body
 {
         --bs-card-border-width: 0;
         background: linear-gradient(135deg, #121212 48.52%, #313131 99.06%);
-         background-size: 150%;
-          background-position: 100% 100%;
-         transition: all .3s ease;
-         
-
-
-         
-
+        background-size: 150%;
+        background-position: 100% 100%;
+        transition: all .3s ease;
 }
 /**/
 
