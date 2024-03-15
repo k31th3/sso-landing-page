@@ -59,7 +59,17 @@ $(document).ready(function()
                 isEmail: isEmail,
                 emailUsername: emailUsername
             }),
-            success: function(response) {
+            beforeSend: function()
+            {
+                $("div[id='append_selection']").append(lock_section);
+                $("div[id='append_selection']").append(lock_section);
+                $("div[id='append_selection']").append(lock_section);
+                $("div[id='append_selection']").append(lock_section);           
+            },
+            success: function(response) 
+            {
+                $("div[id='append_selection']").html(null);
+                
                 console.log('isEmail: ' + isEmail)
                 console.log('emailUsername: ' + emailUsername)
 
@@ -86,16 +96,17 @@ $(document).ready(function()
 
                 if (hasHupayRole) 
                 {
-                    hupay_section = `<div class="carousel-item active carousel-item-1" id="hupay_section">
-                                                    <div class="card rounded-5">
-                                                        <div class="card-body vstack gap-3 justify-content-center align-items-center">
-                                                            <div class="col-8 text-center">
-                                                                <img src="assets_v2/img/hupay.svg" alt="hupay">                                      
-                                                            </div>
-                                                            <p>8:00am - 8:00pm</p>
-                                                        </div>
-                                                    </div>
-                                                </div>`;
+                    hupay_section = `<div class="carousel-item active" id="hupay_section" type="button">
+                                        <div class="card hupay rounded-5">
+                                            <div class="card-header"></div>
+                                            <div class="card-body text-center vstack gap-4">
+                                                <div class="col-8 m-auto">
+                                                   <img src="assets_v2/img/hupay.svg" height="100" width="100" alt="hupay">
+                                                </div>
+                                                <p>8:00am - 8:00pm</p>
+                                            </div>
+                                        </div>
+                                    </div>`;
 
                     $("div[id='append_selection']").append(hupay_section);  
                 }
@@ -106,16 +117,17 @@ $(document).ready(function()
 
                 if (hasFianaRole) 
                 {
-                    fiana_section = `<div class="carousel-item" id="fiana_section">
-                                                    <div class="card rounded-5">
-                                                        <div class="card-body vstack gap-3 justify-content-center align-items-center">
-                                                            <div class="col-8 text-center">
-                                                                <img src="assets_v2/img/fiana.svg" alt="fiana">
-                                                            </div>
-                                                            <p>8:00am - 8:00pm</p>
-                                                        </div>
-                                                    </div>
-                                                </div>`;
+                    fiana_section = `<div class="carousel-item" id="fiana_section" type="button">
+                                        <div class="card fiana rounded-5">
+                                            <div class="card-header"></div>
+                                            <div class="card-body text-center vstack gap-4">
+                                                <div class="col-8 m-auto">
+                                                   <img src="assets_v2/img/fiana.svg" height="100" width="100" alt="fiana">
+                                                </div>
+                                                <p>8:00am - 8:00pm</p>
+                                            </div>
+                                        </div>
+                                    </div>`;
 
                     $("div[id='append_selection']").append(fiana_section);  
                 }
@@ -126,16 +138,17 @@ $(document).ready(function()
 
                 if (hasCahelRole) 
                 {
-                    cahel_section = `<div class="carousel-item" id="cahel_section">
-                                                    <div class="card rounded-5">
-                                                        <div class="card-body vstack gap-3 justify-content-center align-items-center">
-                                                            <div class="col-8 text-center">
-                                                                <img src="assets_v2/img/cahel-logo-(seed).svg" alt="cahel">
-                                                            </div>
-                                                            <p>8:00am - 8:00pm</p>
-                                                        </div>
-                                                    </div>
-                                                </div>`;
+                    cahel_section = `<div class="carousel-item" id="cahel_section" type="button">
+                                        <div class="card cahel rounded-5">
+                                            <div class="card-header"></div>
+                                            <div class="card-body text-center vstack gap-2">
+                                                <div class="col-8 m-auto">
+                                                   <img src="assets_v2/img/cahel.svg" height="115" width="120" alt="cahel">
+                                                </div>
+                                                <p>8:00am - 8:00pm</p>
+                                            </div>
+                                        </div>
+                                    </div>`;
 
                     $("div[id='append_selection']").append(cahel_section);  
                 }
@@ -144,7 +157,8 @@ $(document).ready(function()
                     $("div[id='append_selection']").append(lock_section);
                 }
             },
-            error: function(response) {
+            error: function(response) 
+            {
 
             }
         })
